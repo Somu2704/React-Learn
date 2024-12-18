@@ -1,0 +1,16 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+  height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(13, 13, 15);
+  color: white;
+  /* font-size: 5rem; */
+}

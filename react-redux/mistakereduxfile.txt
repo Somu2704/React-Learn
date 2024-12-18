@@ -1,0 +1,58 @@
+import { useSelector,useState } from 'react'
+import './App.css'
+import { useDispatch } from 'react-redux';
+import { decrement, increment,incrementByAmount,reset } from '../src/assets/features/counter/CounterSlice';
+
+
+
+
+function App() {
+
+
+  const [amount,setAmount]=useState(0);
+  const count = useSelector((state) => state.counter.value);
+
+  const dispatch=useDispatch();
+  
+  function handlePlus(){
+      dispatch(increment());
+  }
+
+  function handleMinus(){
+      dispatch(decrement());
+  }
+  function handleReset(){
+    dispatch(reset());
+  }
+  function handleIncAmt(){
+    dispatch(incrementByAmount(amount));
+  }
+
+  return (
+    <>
+      <div className='container' >
+          <button onClick={handlePlus} >+</button>
+              <h3>
+                count:{}
+              </h3>
+
+            <button onClick={handleMinus} >-</button>
+            <br />
+            <br />
+            <button onClick={handleReset} >reset</button>
+            <br />
+            <br />
+            <input 
+            type="number" 
+            value={amount}
+            onChange={(e)=>setAmount(e.target.value)}
+            placeholder='enter the amt' />
+
+            <br />
+            <button onClick={handleIncAmt} >inc by amt</button>
+      </div>
+    </>
+  )
+}
+
+export default App

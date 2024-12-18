@@ -1,0 +1,26 @@
+.counter-container{
+    display: flex;
+    border: 2px solid green;
+    font-family: monospace;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    gap: 10px;
+    font-weight: bold;
+    font-style: italic;  
+}
+
+#para{
+    font-size: 3rem;
+    color: green;
+}
+
+#btn{
+    font-size: 2rem;
+    font-style: italic;
+    color: white;
+    background-color: green;
+    border: 1px solid white;
+    border-radius: 20px;
+    
+}
